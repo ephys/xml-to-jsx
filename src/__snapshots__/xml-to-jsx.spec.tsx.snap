@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`XmlToJsx Accepts XML that starts with an XML header 1`] = `
+<div>
+  Hello!
+</div>
+`;
+
+exports[`XmlToJsx Converts HTML tags into react-dom elements 1`] = `
+Array [
+  "I am a message with ",
+  <strong>
+    strong text
+  </strong>,
+]
+`;
+
+exports[`XmlToJsx Converts XML tags into react-dom elements 1`] = `
+Array [
+  "I am a message with ",
+  <strong>
+    strong text
+  </strong>,
+]
+`;
+
+exports[`XmlToJsx Maps XML tags to custom react components 1`] = `
+Array [
+  "This text should be ",
+  <em>
+    italic
+  </em>,
+]
+`;
+
+exports[`XmlToJsx Maps XML tags to custom react elements 1`] = `
+Array [
+  "Hey check out my ",
+  <a
+    href="https://my-blog.co.uk"
+  >
+    blog
+  </a>,
+  "!",
+]
+`;
+
+exports[`XmlToJsx Maps XML tags to react-dom components 1`] = `
+Array [
+  "This text should be ",
+  <em>
+    italic
+  </em>,
+]
+`;
+
+exports[`XmlToJsx Merges XML and JSX attributes (XML takes precedence) 1`] = `
+Array [
+  "Hey check out my ",
+  <a
+    href="https://my-blog.fr"
+    rel="noopener noreferrer"
+  >
+    blog
+  </a>,
+  "!",
+]
+`;
+
+exports[`XmlToJsx Parses unclosed tags properly (if html spec declares them as self-closing) 1`] = `
+Array [
+  "I am a message with an unclosed image ",
+  <img
+    alt=""
+    src="http://placehold.it/250x250"
+  />,
+  " and ",
+  <strong>
+    strong text
+  </strong>,
+]
+`;
+
+exports[`XmlToJsx removes all tags not in a whitelist if one is provided 1`] = `
+<allow-tag-2>
+  Should be here
+</allow-tag-2>
+`;
+
+exports[`XmlToJsx removes all tags present in a blacklist if one is provided 1`] = `
+<allow-tag-2>
+  Should be here
+</allow-tag-2>
+`;
